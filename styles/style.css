@@ -82,7 +82,7 @@ main .button {
     height: 80px;
 }
 
-.score {
+.results {
     position: relative;
     left: 25%;
     bottom: 50px;
