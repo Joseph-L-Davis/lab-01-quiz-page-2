@@ -82,11 +82,26 @@ main .button {
     height: 80px;
 }
 
+.button:hover {
+    cursor: pointer;
+    background: #ED213A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid black;
+    border-radius: 8%;
+
+}
+
 .results {
     position: relative;
     left: 25%;
     bottom: 50px;
     font-size: 1.5rem;
+    animation-name: slidein;
+    animation-duration: .5s;
 }
 
 
@@ -97,6 +112,7 @@ content {
 p {
     margin: var(--gutter);
 }
+
 
 footer {
     position: fixed;

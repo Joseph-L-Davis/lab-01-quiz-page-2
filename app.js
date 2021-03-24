@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 // import { isYes } from "./test/utils";
 
-import { isYes } from './test/utils.js';
+import { isYes } from './utils.js';
 
 const button = document.getElementById('button');
 const results = document.getElementById('results');
@@ -14,6 +14,7 @@ const results = document.getElementById('results');
 
 // set event listeners to update state and DOM
 button.addEventListener('click', () => {
+
   // Initial alert, welcoming user
     alert('Welcome to the super mini Blazers Quiz!');
     //  Prompt user for name
@@ -40,15 +41,16 @@ button.addEventListener('click', () => {
     if (!isYes(thirdAnswer)) score++;
     if (!isYes(fourthAnswer)) score++;
 
-    if (score > 2) {
+    if (score >= 3) {
         const goodResultsString = `Nice job, ${name}! You got ${score} correct!`;
+        results.classList.add('shake');
         results.textContent = goodResultsString;
         return;
-    }
+    } else {
 
-    const badResultsString = `Nice try ${name}, but you got ${score} correct.`;
-    results.textContent = badResultsString;
-        
+        const badResultsString = `Nice try ${name}, but you got ${score} correct.`;
+        results.textContent = badResultsString;
+    } 
 
     
 });

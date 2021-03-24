@@ -16,6 +16,6 @@ test('should take in a string and should return true if the string counts as a y
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected, 'yes is true');
-    expect.equal(isYes('YEAH'), expected, 'yes is true');
-    expect.equal(actual, expected, 'yes is true');
+    expect.equal(isYes('YEAH'), true, 'yes is true');
+    expect.equal(isYes('nah'), false, 'nah returns false');
 });
